@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You, Aashiyaa ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(180deg,#fff5f7,#ffeef2);
+  color:#444;
+  overflow-x:hidden;
+}
+section{padding:60px 20px;text-align:center}
+.card{
+  max-width:1100px;
+  margin:auto;
+  background:#fff;
+  border-radius:22px;
+  padding:40px 25px;
+  box-shadow:0 20px 40px rgba(255,105,180,.18);
+}
+h1,h2{color:#ff4d6d}
+h1{
+  font-family:'Great Vibes',cursive;
+  font-size:3.2rem;
+  margin-bottom:10px
+}
+.subtitle{margin-bottom:30px;font-size:1.1rem}
+.heart-btn{
+  background:#ff4d6d;color:#fff;border:none;
+  padding:15px 40px;border-radius:50px;
+  cursor:pointer;font-size:1rem;
+  animation:pulse 1.5s infinite
+}
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.1)}
+  100%{transform:scale(1)}
+}
+
+/* floating hearts */
+.heart{
+  position:fixed;bottom:-20px;
+  color:rgba(255,105,180,.6);
+  animation:floatUp 10s linear infinite;
+  font-size:20px
+}
+@keyframes floatUp{
+  0%{transform:translateY(0);opacity:1}
+  100%{transform:translateY(-120vh);opacity:0}
+}
+
+/* messages */
+.messages{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px
+}
+.message-card{
+  background:#fff;
+  padding:25px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  transition:.3s
+}
+.message-card:hover{transform:translateY(-8px)}
+@media(max-width:900px){
+  .messages{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:500px){
+  .messages{grid-template-columns:1fr}
+}
+
+/* photos flip */
+.photos{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  perspective:1000px
+}
+.flip{
+  width:100%;height:230px;position:relative;
+}
+.flip-inner{
+  position:absolute;width:100%;height:100%;
+  transition:transform .8s;
+  transform-style:preserve-3d
+}
+.flip:hover .flip-inner{transform:rotateY(180deg)}
+.flip-front,.flip-back{
+  position:absolute;width:100%;height:100%;
+  backface-visibility:hidden;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,.12)
+}
+.flip-front img{
+  width:100%;height:100%;object-fit:cover
+}
+.flip-back{
+  background:#ffeff4;
+  transform:rotateY(180deg);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  color:#ff4d6d;
+  font-size:.95rem
+}
+@media(max-width:900px){
+  .photos{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:500px){
+  .photos{grid-template-columns:1fr}
+}
+
+/* proposal */
+.proposal{
+  font-family:'Great Vibes',cursive;
+  font-size:1.8rem;
+  color:#ff4d6d;
+  line-height:1.6
+}
+
+/* modal */
+.modal{
+  display:none;
+  position:fixed;inset:0;
+  background:rgba(0,0,0,.5);
+  align-items:center;justify-content:center
+}
+.modal-content{
+  background:#fff;
+  padding:40px;
+  border-radius:20px;
+  text-align:center;
+  animation:pop .5s ease
+}
+@keyframes pop{
+  from{transform:scale(.6);opacity:0}
+  to{transform:scale(1);opacity:1}
+}
+</style>
+</head>
+
+<body>
+
+<section>
+  <div class="card">
+    <h1>For You, Aashiyaa ❤️</h1>
+    <p class="subtitle">Every heartbeat of mine belongs to you</p>
+    <button class="heart-btn">Click to feel my love</button>
+  </div>
+</section>
+
+<section>
+  <div class="card">
+    <h2>Love Notes for You 🌹</h2>
+    <div class="messages">
+      <div class="message-card">🌹 Rose Day<br>Aashiyaa, every rose feels shy beside you, because your presence colors my world with a softness no flower could ever match.</div>
+      <div class="message-card">💍 Propose Day<br>Aashiyaa, if love were a question, my soul would answer you every time, choosing forever in your smile, your silence, your heartbeat.</div>
+      <div class="message-card">🍫 Chocolate Day<br>Aashiyaa, you’re sweeter than chocolate, but deeper—your love melts slowly, leaving warmth that lingers on my heart endlessly.</div>
+      <div class="message-card">🧸 Teddy Day<br>Aashiyaa, I wish I could hold you like a teddy on lonely nights, protecting your dreams the way you quietly protect my heart.</div>
+      <div class="message-card">🤝 Promise Day<br>Aashiyaa, I promise to choose you in chaos and calm, to love you gently, fiercely, and faithfully through every version of us.</div>
+      <div class="message-card">💋 Kiss Day<br>Aashiyaa, one kiss from you feels like poetry whispered directly into my soul, soft enough to heal, powerful enough to stay forever.</div>
+      <div class="message-card">🤗 Hug Day<br>Aashiyaa, your hugs feel like home—where my worries rest, my heart slows down, and love breathes quietly between us.</div>
+      <div class="message-card">❤️ Valentine’s Day<br>Aashiyaa, loving you isn’t something I do—it’s who I am, a constant heartbeat shaped entirely by your presence.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="card">
+    <h2>Our Beautiful Moments 📸</h2>
+    <div class="photos">
+      <div class="flip"><div class="flip-inner">
+        <div class="flip-front"><img src="images/photo1.jpg"></div>
+        <div class="flip-back">In this reflection, the world disappears—there’s only us, pressed close, sharing a kiss that feels like a promise spoken without words.</div>
+      </div></div>
+
+      <div class="flip"><div class="flip-inner">
+        <div class="flip-front"><img src="images/photo2.jpg"></div>
+        <div class="flip-back">When I offered you those roses, I wasn’t giving flowers—I was handing you my heart.</div>
+      </div></div>
+
+      <div class="flip"><div class="flip-inner">
+        <div class="flip-front"><img src="images/photo3.jpg"></div>
+        <div class="flip-back">Wrapped in winter and silence, you leaned into me, and I knew I’d protect you forever.</div>
+      </div></div>
+
+      <div class="flip"><div class="flip-inner">
+        <div class="flip-front"><img src="images/photo4.jpg"></div>
+        <div class="flip-back">Your smile here feels like sunlight finding me—soft, warm, effortless.</div>
+      </div></div>
+
+      <div class="flip"><div class="flip-inner">
+        <div class="flip-front"><img src="images/photo5.jpg"></div>
+        <div class="flip-back">With my arms around you, time slowed down just to watch us.</div>
+      </div></div>
+
+      <div class="flip"><div class="flip-inner">
+        <div class="flip-front"><img src="images/photo6.jpg"></div>
+        <div class="flip-back">That laugh you shared with me was my favorite sound.</div>
+      </div></div>
+
+      <div class="flip"><div class="flip-inner">
+        <div class="flip-front"><img src="images/photo7.jpg"></div>
+        <div class="flip-back">Even in quiet darkness, you glow for me, Aashiyaa.</div>
+      </div></div>
+
+      <div class="flip"><div class="flip-inner">
+        <div class="flip-front"><img src="images/photo8.jpg"></div>
+        <div class="flip-back">In this closeness, I learned home is wherever you stand.</div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="card">
+    <div class="proposal">
+      I can love you four days—Summer, Winter, Autumn, Spring.<br>
+      Oh! sorry only three days—Yesterday, Today, Tomorrow.<br>
+      How about 2 days—Today and Tonight.<br>
+      Maybe only one day—that is Every Day.<br>
+      <br>I love You Yashika ❤️
+    </div>
+  </div>
+</section>
+
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h2>Forever Begins Here 💍❤️</h2>
+  </div>
+</div>
+
+<script>
+setInterval(()=>{
+  const h=document.createElement('div');
+  h.className='heart';
+  h.style.left=Math.random()*100+'vw';
+  h.innerHTML='❤️';
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),10000);
+},600);
+</script>
+
+</body>
+</html>
